@@ -7,15 +7,15 @@
 /**
 * struct listint_s - Doubly linked list node
 *
-* @a: Integer stored in the node
-@ pv: Pointer to the previous element of the list
-@ nxt: Pointer to the next element of the list
+* @n: Integer stored in the node
+@ prev: Pointer to the previous element of the list
+@ next: Pointer to the next element of the list
 */
 typedef struct listint_s
 {
-	int a;
-	struct listint_s *pv;
-	struct listint_s *nxt;
+	int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 /* print */
