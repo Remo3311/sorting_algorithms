@@ -8,37 +8,37 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t a = 0;
-	size_t b;
+	size_t f = 0;
+	size_t g;
 	int tem;
 	int coare;
-	int min_ind;
-	int swap;
+	int min_index;
+	int swapped;
 
 	if (array == NULL)
 		return;
-	while (a < size)
+	while (f < size)
 	{
-		b = a;
-		coare = array[a];
-		swap = 0;
-		while (b < size)
+		g = f;
+		coare = array[f];
+		swapped = 0;
+		while (g < size)
 		{
-			if (coare > array[b])
+			if (coare > array[g])
 			{
-				coare = array[a];
-				min_ind = b;
-				swap = 1;
+				coare = array[g];
+				min_index = g;
+				swapped = 1;
 			}
-			b++;
+			g++;
 		}
-		if (swap == 1)
+		if (swapped == 1)
 		{
-			tem = array[a];
-			array[a] = coare;
-			array[min_ind] = tem;
+			tem = array[f];
+			array[f] = coare;
+			array[min_index] = tem;
 			print_array(array, size);
 		}
-		a++;
+		f++;
 	}
 }
